@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import {Link} from 'react-router-dom'
 
 
 export default function Home() {
@@ -15,15 +16,15 @@ console.log(posts)
 const AllPosts = () => {
     return (
 
-        <div className="post">
+        <div className="posts">
                 {posts.map((item, index) => {
                     return(
-                        <div className="post-item" key={item.id}>
+                        <Link state={item} to={'/single-post'} className="post-item" key={item.id}>
                         <img src={`https://source.unsplash.com/random?sig=${index}` }alt="" />
                         <h4> {item.auther}</h4>
                         <p>{item.text}</p>
                         <p> {item.data}</p>
-                        </div>
+                        </Link>
                     )
                 })}</div>
     )
