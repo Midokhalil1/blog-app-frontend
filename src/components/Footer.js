@@ -1,5 +1,7 @@
+
+
 export default function Footer() {
-    return(
-        <h1>Footer</h1>
+    return (
+      <footer><small>Copyrights &copy; 2022 | all rights reserved</small></footer>
     )
-}
+  }
